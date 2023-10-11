@@ -5,18 +5,12 @@ import {Image, SafeAreaView} from 'react-native';
 import {Button, Input, Separator} from 'react-native-smiles-ar-uikit';
 
 import {images} from '@assets';
-import {coordinator} from '@routes';
-import {authActions, useAppDispatch} from '@store';
 
+import {useSignIn} from './hooks/useSignIn';
 import {styles} from './styles';
 
 export const SignIn = () => {
-  const dispatch = useAppDispatch();
-
-  function handleButton() {
-    coordinator.goToHome();
-    dispatch(authActions.setAuthToken('teste'));
-  }
+  const {t, handleButton} = useSignIn();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -28,21 +22,21 @@ export const SignIn = () => {
       <Separator size={36} vertical />
       <Input
         style={styles.input}
-        placeholder="Digite seu e-mail"
+        placeholder={t('signin_input_email')}
         autoCapitalize="none"
         keyboardType="email-address"
       />
       <Separator size={11} vertical />
       <Input
         style={styles.input}
-        placeholder="Digite sua senha"
+        placeholder={t('signin_input_password')}
         secureTextEntry
         autoCapitalize="none"
         autoComplete="off"
         autoCorrect={false}
       />
       <Separator size={11} vertical />
-      <Button onPress={handleButton} text="Entrar" />
+      <Button onPress={handleButton} text={t('signin_button')} />
     </SafeAreaView>
   );
 };
