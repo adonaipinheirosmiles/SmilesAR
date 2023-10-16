@@ -11,6 +11,10 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@react-native-firebase/analytics": "^18.5.0",
+    "@react-native-firebase/app": "^18.5.0",
+    "@react-native-firebase/crashlytics": "^18.5.0",
+    "@react-native-firebase/perf": "^18.5.0",
     "@react-navigation/native": "6.1.8",
     "@react-navigation/native-stack": "6.9.14",
     "@reduxjs/toolkit": "1.9.7",

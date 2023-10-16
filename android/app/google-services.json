@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392525858731",
+    "project_id": "smiles-ar-example",
+    "storage_bucket": "smiles-ar-example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392525858731:android:32fb6b53ef842e4dae74ee",
+        "android_client_info": {
+          "package_name": "com.smilesar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDpMaQR_sUr7NuebOUVMfBCqH0klPeMHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,6 +8,7 @@ import {
 
 import {navigationRef} from './navigation/navigation';
 import {AuthStack, AuthStackParams} from './stack/AuthStack';
+import {useRoutes} from './useRoutes';
 
 export type RootStackParams = {
   AuthStack: AuthStackParams;
@@ -20,8 +21,13 @@ const NavigatorOptions: NativeStackNavigationOptions = {
 };
 
 export const Routes = () => {
+  const {onReady, onScreenChange} = useRoutes();
+
   return (
-    <NavigationContainer ref={navigationRef}>
+    <NavigationContainer
+      ref={navigationRef}
+      onReady={onReady}
+      onStateChange={onScreenChange}>
       <RootStack.Navigator screenOptions={NavigatorOptions}>
         {AuthStack}
       </RootStack.Navigator>
