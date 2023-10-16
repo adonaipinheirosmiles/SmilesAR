@@ -6,12 +6,11 @@ import {Button, Input, Separator} from 'react-native-smiles-ar-uikit';
 
 import {images} from '@assets';
 
-import {useSignIn} from './hooks/useSignIn';
+import {useSignUp} from './hooks/useSignUp';
 import {styles} from './styles';
 
-export const SignIn = () => {
-  const {t, initialValues, onSubmit, SignInSchema, handleSignUpButton} =
-    useSignIn();
+export const SignUp = () => {
+  const {t, initialValues, onSubmit, SignUpSchema, handleBack} = useSignUp();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -24,15 +23,24 @@ export const SignIn = () => {
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
-        validationSchema={SignInSchema}>
+        validationSchema={SignUpSchema}>
         {({values, errors, handleChange, handleSubmit}) => (
           <>
+            <Input
+              value={values.name}
+              onChangeText={handleChange('name')}
+              error={errors.name}
+              placeholder={t('signup_input_name')}
+              autoCapitalize="words"
+              style={styles.input}
+            />
+            <Separator size={11} vertical />
             <Input
               value={values.email}
               onChangeText={handleChange('email')}
               error={errors.email}
               style={styles.input}
-              placeholder={t('signin_input_email')}
+              placeholder={t('signup_input_email')}
               autoCapitalize="none"
               keyboardType="email-address"
             />
@@ -42,21 +50,33 @@ export const SignIn = () => {
               onChangeText={handleChange('pass')}
               error={errors.pass}
               style={styles.input}
-              placeholder={t('signin_input_password')}
+              placeholder={t('signup_input_password')}
               secureTextEntry
               autoCapitalize="none"
               autoComplete="off"
               autoCorrect={false}
             />
             <Separator size={11} vertical />
-            <Button onPress={() => handleSubmit()} text={t('signin_button')} />
+            <Input
+              value={values.confirmPass}
+              onChangeText={handleChange('confirmPass')}
+              error={errors.confirmPass}
+              style={styles.input}
+              placeholder={t('signup_input_confirm_password')}
+              secureTextEntry
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect={false}
+            />
+            <Separator size={11} vertical />
+            <Button onPress={() => handleSubmit()} text={t('signup_button')} />
             <Separator size={24} vertical />
             <TouchableOpacity
-              onPress={handleSignUpButton}
+              onPress={handleBack}
               hitSlop={16}
               activeOpacity={0.7}>
               <Text style={styles.signUpText}>
-                {t('signin_button_forgotpass')}
+                {t('signup_button_backtosignin')}
               </Text>
             </TouchableOpacity>
           </>

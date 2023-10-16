@@ -10,7 +10,9 @@
       "@utils": ["src/utils"],
       "@assets": ["src/assets"],
       "@store": ["src/store"],
+      "@storage": ["src/storage"],
       "@locale": ["src/locale"],
+      "@analytics": ["src/analytics"],
     }
   }
 }

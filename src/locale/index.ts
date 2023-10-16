@@ -2,6 +2,8 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 
+import Config from 'react-native-config';
+
 import {ptBR} from './ptBR';
 
 i18n.use(initReactI18next).init({
@@ -9,8 +11,8 @@ i18n.use(initReactI18next).init({
   resources: {
     ptBR,
   },
-  lng: 'ptBR',
-  fallbackLng: 'ptBR',
+  lng: Config.APP_LANGUAGE,
+  fallbackLng: Config.APP_LANGUAGE,
   interpolation: {
     escapeValue: false,
   },

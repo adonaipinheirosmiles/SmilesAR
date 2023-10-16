@@ -1,0 +1,11 @@
+{
+  "signup_input_name": "Digite seu nome",
+  "signup_input_email": "Digite seu e-mail",
+  "signup_input_password": "Digite sua senha",
+  "signup_input_confirm_password": "Digite novamente sua senha",
+  "signup_button": "Cadastrar",
+  "signup_button_backtosignin": "Já possui cadastro? Clique aqui",
+  "signup_field_email_incorrect": "Preencha um e-mail válido!",
+  "signup_field_confirm_pass_incorrect": "Senhas não estão iguais",
+  "signup_field_required": "Campo obrigatório"
+}

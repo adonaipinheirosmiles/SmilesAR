@@ -3,7 +3,10 @@ import {AuthStackScreenNames} from '../stack/AuthStack';
 
 const AuthCoordinator = {
   goToSignIn: () => navigation.push(AuthStackScreenNames.SignIn),
-  goToHome: () => navigation.push(AuthStackScreenNames.Home),
+  goToSignInWithOutRollback: () =>
+    navigation.replace(AuthStackScreenNames.SignIn),
+  goToSignup: () => navigation.push(AuthStackScreenNames.SignUp),
+  goToHome: () => navigation.replace(AuthStackScreenNames.Home),
 };
 
 export const coordinator = {

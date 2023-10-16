@@ -28,11 +28,6 @@ module.exports = {
             group: 'builtin',
             position: 'before',
           },
-          {
-            pattern: 'react-native',
-            group: 'builtin',
-            position: 'before',
-          },
         ],
         pathGroupsExcludedImportTypes: ['react', 'react-native'],
         groups: [

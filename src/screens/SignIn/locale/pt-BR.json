@@ -1,5 +1,8 @@
 {
   "signin_input_email": "Digite seu e-mail",
   "signin_input_password": "Digite sua senha",
-  "signin_button": "Entrar"
+  "signin_button": "Entrar",
+  "signin_button_forgotpass": "Esqueci minha senha",
+  "signin_field_email_incorrect": "Preencha um e-mail válido!",
+  "signin_field_required": "Campo obrigatório"
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {StatusBar} from 'react-native';
-
 import {$COLORS} from 'react-native-smiles-ar-uikit';
 import {Provider} from 'react-redux';
 import '@locale';
