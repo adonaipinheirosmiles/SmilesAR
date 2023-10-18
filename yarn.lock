@@ -1873,8 +1873,9 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@smiles-ar/services@file:../SmilesARServices":
+"@smiles-ar/services@https://github.com/adonaipinheirosmiles/SmilesARServices.git":
   version "1.0.0"
+  resolved "https://github.com/adonaipinheirosmiles/SmilesARServices.git#593d6b8b88791d200eb2278c5d071e1b32584040"
   dependencies:
     axios "^1.5.1"
 

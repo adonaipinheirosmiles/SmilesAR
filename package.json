@@ -23,7 +23,7 @@
     "@react-navigation/native": "6.1.8",
     "@react-navigation/native-stack": "6.9.14",
     "@reduxjs/toolkit": "1.9.7",
-    "@smiles-ar/services": "/Users/smiles.ajpinheiro/Documents/GitHub/SmilesARServices",
+    "@smiles-ar/services": "https://github.com/adonaipinheirosmiles/SmilesARServices.git",
     "formik": "2.4.5",
     "i18next": "23.5.1",
     "react": "18.2.0",
