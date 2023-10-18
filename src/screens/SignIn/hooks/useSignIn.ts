@@ -19,7 +19,7 @@ export function useSignIn() {
     coordinator.goToSignup();
   }
 
-  function handleRecoverButton() {
+  function handleRecoverPassButton() {
     coordinator.goToRecoverPass();
   }
 
@@ -33,7 +33,7 @@ export function useSignIn() {
     t,
     handleButton,
     handleSignUpButton,
-    handleRecoverButton,
+    handleRecoverPassButton,
     initialValues,
     onSubmit,
     SignInSchema,

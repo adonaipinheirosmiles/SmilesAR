@@ -16,7 +16,7 @@ export const SignIn = () => {
     onSubmit,
     SignInSchema,
     handleSignUpButton,
-    handleRecoverButton,
+    handleRecoverPassButton,
   } = useSignIn();
 
   return (
@@ -67,7 +67,7 @@ export const SignIn = () => {
               </TouchableOpacity>
               <Separator size={24} vertical />
               <TouchableOpacity
-                onPress={handleRecoverButton}
+                onPress={handleRecoverPassButton}
                 hitSlop={16}
                 activeOpacity={0.7}>
                 <Text style={styles.signUpText}>
