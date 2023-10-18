@@ -17,11 +17,13 @@ export function RecoverPass() {
         initialValues={initialValues}
         onSubmit={() => {}}
         validationSchema={RecoverPassSchema}>
-        {({values, errors}) => (
+        {({values, errors, handleChange}) => (
           <>
             <Input
               value={values.email}
               error={errors.email}
+              autoCapitalize="none"
+              onChangeText={handleChange('email')}
               placeholder={t('recover_input')}
               style={styles.input}
             />

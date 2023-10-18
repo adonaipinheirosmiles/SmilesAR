@@ -1,4 +1,6 @@
 {
   "recover_input": "Digite seu e-mail para recuperação",
+  "recover_input_email_error": "Preencha um e-mail válido!",
+  "recover_required_field": "Campo obrigatório",
   "recover_button": "Recuperar senha"
 }

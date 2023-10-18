@@ -8,7 +8,9 @@ export function useRecoverPass() {
   const {t} = useTranslation();
 
   const RecoverPassSchema = Yup.object().shape({
-    email: Yup.string().email().required(),
+    email: Yup.string()
+      .email(t('recover_input_email_error'))
+      .required(t('recover_required_field')),
   });
 
   function handleGoBack() {
