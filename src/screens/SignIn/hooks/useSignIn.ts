@@ -19,6 +19,10 @@ export function useSignIn() {
     coordinator.goToSignup();
   }
 
+  function handleRecoverButton() {
+    coordinator.goToRecoverPass();
+  }
+
   function onSubmit(values: typeof initialValues) {
     dispatch(authActions.setAuthToken(`@TOKEN:${values.email}`));
     userStorage.set('user.email', values.email);
@@ -29,6 +33,7 @@ export function useSignIn() {
     t,
     handleButton,
     handleSignUpButton,
+    handleRecoverButton,
     initialValues,
     onSubmit,
     SignInSchema,

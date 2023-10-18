@@ -6,6 +6,7 @@ const AuthCoordinator = {
   goToSignInWithOutRollback: () =>
     navigation.replace(AuthStackScreenNames.SignIn),
   goToSignup: () => navigation.push(AuthStackScreenNames.SignUp),
+  goToRecoverPass: () => navigation.push(AuthStackScreenNames.RecoverPass),
 };
 
 const LoggedCoordinator = {

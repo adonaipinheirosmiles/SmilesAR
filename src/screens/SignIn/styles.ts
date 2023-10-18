@@ -19,4 +19,10 @@ export const styles = StyleSheet.create({
     color: $COLORS.primaryDark,
     textDecorationLine: 'underline',
   },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });

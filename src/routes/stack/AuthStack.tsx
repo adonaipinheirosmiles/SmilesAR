@@ -6,18 +6,20 @@ import {
 } from '@react-navigation/native-stack';
 import {$COLORS} from 'react-native-smiles-ar-uikit';
 
-import {Home, SignIn, SignUp} from '@screens';
+import {Home, RecoverPass, SignIn, SignUp} from '@screens';
 
 export const AuthStackScreenNames = {
   SignIn: 'SignIn',
   SignUp: 'SignUp',
   Home: 'Home',
+  RecoverPass: 'RecoverPass',
 } as const;
 
 export type AuthStackParams = {
   [AuthStackScreenNames.SignIn]: undefined;
   [AuthStackScreenNames.SignUp]: undefined;
   [AuthStackScreenNames.Home]: undefined;
+  [AuthStackScreenNames.RecoverPass]: undefined;
 };
 
 const AuthStackNavigator = createNativeStackNavigator<AuthStackParams>();
@@ -47,6 +49,10 @@ export const AuthStack = (
     <AuthStackNavigator.Screen
       name={AuthStackScreenNames.Home}
       component={Home}
+    />
+    <AuthStackNavigator.Screen
+      name={AuthStackScreenNames.RecoverPass}
+      component={RecoverPass}
     />
   </>
 );
