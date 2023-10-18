@@ -1,10 +1,11 @@
 import React from 'react';
 
 import {Formik} from 'formik';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {$COLORS, Button, Input, Separator} from 'react-native-smiles-ar-uikit';
+import {Text, TouchableOpacity, View} from 'react-native';
+import {Button, Input, Separator} from 'react-native-smiles-ar-uikit';
 
 import {useRecoverPass} from './hooks/useRecoverPass';
+import {styles} from './styles';
 
 export function RecoverPass() {
   const {handleGoBack, initialValues, RecoverPassSchema, t} = useRecoverPass();
@@ -41,29 +42,3 @@ export function RecoverPass() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 24,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: $COLORS.primary,
-  },
-  input: {
-    height: 40,
-  },
-  button: {
-    position: 'absolute',
-    bottom: 20,
-  },
-  buttonText: {
-    color: $COLORS.primary,
-    fontWeight: 'bold',
-    textDecorationLine: 'underline',
-  },
-});
